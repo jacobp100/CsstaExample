@@ -29,13 +29,13 @@ const Base = styled(View)`
 /* You'd write this in production, but does show-case what you can do */
 const Orientation = styled(Base)`
   @media (orientation: landscape) {
-    &:not([@portrait]) {
+    &[@direction='landscape'] {
       --border: var(--active);
     }
   }
 
   @media (orientation: portrait) {
-    &[@portrait] {
+    &[@direction='portrait'] {
       --border: var(--active);
     }
   }
@@ -85,10 +85,10 @@ export default () => (
   <View>
     <ExampleHeader>Orientation</ExampleHeader>
     <ExampleRow>
-      <Orientation>
+      <Orientation direction="landscape">
         <ExampleText>Landscape</ExampleText>
       </Orientation>
-      <Orientation portrait>
+      <Orientation direction="portrait">
         <ExampleText>Portrait</ExampleText>
       </Orientation>
     </ExampleRow>
