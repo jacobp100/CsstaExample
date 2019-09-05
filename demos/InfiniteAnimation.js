@@ -9,10 +9,10 @@ export default styled(Animated.View)`
   animation: 3s spin linear infinite;
 
   @keyframes spin {
-    start {
+    0% {
       transform: rotate(0deg);
     }
-    end {
+    100% {
       transform: rotate(360deg);
     }
   }
